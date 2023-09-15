@@ -1,4 +1,4 @@
-import {forwardRef} from "react";
+import { forwardRef } from "react";
 import "./Button.css";
 
 type ButtonProps = {
@@ -7,29 +7,17 @@ type ButtonProps = {
 };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      label, 
-      onClick,
-      ...rest
-    }: ButtonProps, 
-    ref
-  ): JSX.Element => {
-  
+  ({ label, onClick, ...rest }: ButtonProps, ref): JSX.Element => {
     const content = label;
 
-  return (
-    <button 
-      ref={ref}
-      className="btn"
-      onClick={onClick} 
-      {...rest}
-    >
-      {content}
-    </button>
-  );
-});
+    return (
+      <button ref={ref} className="btn" onClick={onClick} {...rest}>
+        {content}
+      </button>
+    );
+  }
+);
 
 Button.displayName = "Button";
 
-export {Button};
+export { Button };

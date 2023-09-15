@@ -1,4 +1,3 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -6,8 +5,6 @@ import "./App.css";
 import { Button } from "./components";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="p-12">
       <div>
@@ -18,20 +15,18 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1 className="text-3xl font-bold">Hello world!</h1>
-      <div>
-        <button
-          className="rounded-full bg-slate-100 px-6 py-3"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+      <div className="border-solid border border-border-weak p-6 rounded-xl flex flex-col gap-4 items-start">
+        <h1 className="text-3xl text-text-default font-bold">Hello world!</h1>
+        <div>
+          <p className="text-text-default">
+            Edit <code>src/App.tsx</code> and save to test HMR
+          </p>
+        </div>
+        <p className="text-text-default">
+          Click on the Vite and React logos to learn more
         </p>
+        <Button label="Click me" onClick={() => console.log("clicked")} />
       </div>
-      <p className="">Click on the Vite and React logos to learn more</p>
-      <Button label="Click me" onClick={() => console.log("clicked")} />
     </div>
   );
 }
