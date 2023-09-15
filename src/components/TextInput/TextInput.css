@@ -1,0 +1,7 @@
+.textinput {
+  @apply border-solid border border-border-weak rounded-md px-3 py-2;
+}
+
+.textinput:disabled {
+  @apply opacity-30 cursor-not-allowed;
+}

@@ -1,6 +1,6 @@
-import "./App.css";
+// import "./App.css";
 
-import { Button, Heading } from "./components";
+import { Button, Heading, TextInput } from "./components";
 
 const Container = ({ ...rest }) => (
   <div
@@ -20,17 +20,25 @@ function App() {
   return (
     <div className="p-12 flex flex-col items-start gap-4">
       <Heading>Component sticker sheet</Heading>
-      <Container>
-        <Badge>Heading</Badge>
-        {[1, 2, 3, 4, 5, 6].map((level) => (
-          <Heading level={level}>{`Heading ${level}`}</Heading>
-        ))}
-      </Container>
-      <Container>
-        <Badge>Button</Badge>
-
-        <Button label="Click me" onClick={() => console.log("clicked")} />
-      </Container>
+      <div className="grid grid-flow-col gap-6 items-start">
+        <Container>
+          <Badge>Heading</Badge>
+          {[1, 2, 3, 4, 5, 6].map((level) => (
+            <Heading key={level} level={level}>{`Heading ${level}`}</Heading>
+          ))}
+        </Container>
+        <Container>
+          <Badge>TextInput</Badge>
+          <TextInput placeholder="Placeholder" />
+          <TextInput defaultValue="Text value" />
+          <TextInput defaultValue="Mysecretpassword!" type="password" />
+          <TextInput defaultValue="Disabled state" disabled />
+        </Container>
+        <Container>
+          <Badge>Button</Badge>
+          <Button label="Click me" onClick={() => console.log("clicked")} />
+        </Container>
+      </div>
     </div>
   );
 }
