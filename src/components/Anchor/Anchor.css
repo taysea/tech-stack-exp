@@ -1,0 +1,8 @@
+.anchor {
+  @apply text-text-default font-semibold;
+  text-decoration: underline;
+}
+
+.anchor:hover {
+  @apply text-text-strong;
+}

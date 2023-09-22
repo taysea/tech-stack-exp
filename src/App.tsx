@@ -1,6 +1,6 @@
 // import "./App.css";
 
-import { Button, Heading, TextInput } from "./components";
+import { Anchor, Button, Heading, TextInput } from "./components";
 
 const Container = ({ ...rest }) => (
   <div
@@ -37,6 +37,10 @@ function App() {
         <Container>
           <Badge>Button</Badge>
           <Button label="Click me" onClick={() => console.log("clicked")} />
+        </Container>
+        <Container>
+          <Badge>Anchor</Badge>
+          <Anchor href="#" label="Anchor label" />
         </Container>
       </div>
     </div>
