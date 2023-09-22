@@ -36,7 +36,8 @@ function App() {
         </Container>
         <Container>
           <Badge>Button</Badge>
-          <Button label="Click me" onClick={() => console.log("clicked")} />
+          <Button label="Primary button" onClick={() => console.log("clicked")} />
+          <Button kind="secondary" label="Secondary button" onClick={() => console.log("clicked")} />
         </Container>
       </div>
     </div>
