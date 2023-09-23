@@ -1,4 +1,5 @@
 import { Button, Heading, TextInput } from "../../components";
+import Keyboard from "../../assets/icons/keyboard.svg?react"
 
 const Container = ({ ...rest }) => (
   <div
@@ -34,7 +35,11 @@ export const StickerSheet = () => {
         </Container>
         <Container>
           <Badge>Button</Badge>
-          <Button label="Click me" onClick={() => console.log("clicked")} />
+          <Button label="Primary button" onClick={() => console.log("clicked")} />
+          <Button kind="secondary" label="Secondary button" onClick={() => console.log("clicked")} />
+          <Button label="Keyboard" icon={<Keyboard />} onClick={() => console.log("clicked")} />
+          <Button kind="secondary" icon={<Keyboard />} onClick={() => console.log("clicked")} />
+          <Button kind="tertiary" icon={<Keyboard />} onClick={() => console.log("clicked")} />
         </Container>
       </div>
       </>
