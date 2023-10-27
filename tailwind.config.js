@@ -15,7 +15,6 @@ export default {
         text: {
           default: "#222222",
           weak: "#717171",
-          strong: "#000000",
         },
       },
       fontSize: {
