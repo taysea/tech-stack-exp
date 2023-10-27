@@ -1,5 +1,5 @@
-import { Button, Heading, TextInput } from "../../components";
-import Keyboard from "../../assets/icons/keyboard.svg?react"
+import { Anchor, Button, Heading, TextInput } from "../../components";
+import Keyboard from "../../assets/icons/keyboard.svg?react";
 
 const Container = ({ ...rest }) => (
   <div
@@ -18,7 +18,7 @@ const Badge = ({ ...rest }) => (
 export const StickerSheet = () => {
   return (
     <>
-    <Heading>Component sticker sheet</Heading>
+      <Heading>Component sticker sheet</Heading>
       <div className="grid grid-flow-col gap-6 items-start">
         <Container>
           <Badge>Heading</Badge>
@@ -35,13 +35,36 @@ export const StickerSheet = () => {
         </Container>
         <Container>
           <Badge>Button</Badge>
-          <Button label="Primary button" onClick={() => console.log("clicked")} />
-          <Button kind="secondary" label="Secondary button" onClick={() => console.log("clicked")} />
-          <Button label="Keyboard" icon={<Keyboard />} onClick={() => console.log("clicked")} />
-          <Button kind="secondary" icon={<Keyboard />} onClick={() => console.log("clicked")} />
-          <Button kind="tertiary" icon={<Keyboard />} onClick={() => console.log("clicked")} />
+          <Button
+            label="Primary button"
+            onClick={() => console.log("clicked")}
+          />
+          <Button
+            kind="secondary"
+            label="Secondary button"
+            onClick={() => console.log("clicked")}
+          />
+          <Button
+            label="Keyboard"
+            icon={<Keyboard />}
+            onClick={() => console.log("clicked")}
+          />
+          <Button
+            kind="secondary"
+            icon={<Keyboard />}
+            onClick={() => console.log("clicked")}
+          />
+          <Button
+            kind="tertiary"
+            icon={<Keyboard />}
+            onClick={() => console.log("clicked")}
+          />
+        </Container>
+        <Container>
+          <Badge>Anchor</Badge>
+          <Anchor href="#" label="Anchor label" />
         </Container>
       </div>
-      </>
-  )
-}
+    </>
+  );
+};
