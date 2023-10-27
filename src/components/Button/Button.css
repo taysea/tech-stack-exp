@@ -1,5 +1,5 @@
 .btn {
-  @apply bg-brand text-white font-semibold py-2 px-4 rounded;
+  @apply bg-brand text-white font-semibold py-2 px-4 rounded-lg border border-brand;
 }
 
 .btn:hover {
@@ -19,7 +19,7 @@
 } 
 
 .secondary {
-  @apply bg-inherit text-text-default border-border-default border-solid border;
+  @apply bg-inherit text-text-default border-border-default;
 }
 
 .secondary:hover {
@@ -27,7 +27,7 @@
 }
 
 .tertiary {
-  @apply bg-inherit text-text-default;
+  @apply bg-inherit text-text-default rounded-full border-transparent;
 }
 
 .tertiary:hover {

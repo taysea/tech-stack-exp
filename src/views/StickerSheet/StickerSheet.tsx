@@ -1,16 +1,16 @@
 import { Button, Heading, TextInput } from "../../components";
-import Keyboard from "../../assets/icons/keyboard.svg?react"
+import Keyboard from "../../assets/icons/keyboard.svg?react";
 
 const Container = ({ ...rest }) => (
   <div
-    className="border-solid border border-border-weak p-6 rounded-xl flex flex-col gap-4 items-start"
+    className="border border-border-weak p-6 rounded-xl flex flex-col gap-4 items-start"
     {...rest}
   />
 );
 
 const Badge = ({ ...rest }) => (
   <div
-    className="bg-border-weak/30 font-bold border-solid border border-border-weak/50 px-3 py-1 rounded-md flex flex-col gap-4 items-start"
+    className="flex flex-col gap-4 items-start px-2 py-0.5 rounded-full font-medium text-small text-gray-800/70 border border-border-weak/50  bg-gray-50/50 "
     {...rest}
   />
 );
@@ -37,6 +37,7 @@ export const StickerSheet = () => {
           <Badge>Button</Badge>
           <Button label="Primary button" onClick={() => console.log("clicked")} />
           <Button kind="secondary" label="Secondary button" onClick={() => console.log("clicked")} />
+          <Button kind="tertiary" label="Tertiary button" onClick={() => console.log("clicked")} />
           <Button label="Keyboard" icon={<Keyboard />} onClick={() => console.log("clicked")} />
           <Button kind="secondary" icon={<Keyboard />} onClick={() => console.log("clicked")} />
           <Button kind="tertiary" icon={<Keyboard />} onClick={() => console.log("clicked")} />
